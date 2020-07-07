@@ -20,13 +20,6 @@
 */
 
 //Load Facebook SDK for JavaScript
-function Facebook_SDK() {
-    ?>
-	      
- <?php
-}
-add_action('wp_footer', 'Facebook_SDK');
-}
 
 
 // PixelViewContent 
