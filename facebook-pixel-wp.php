@@ -22,30 +22,10 @@
 //Load Facebook SDK for JavaScript
 function Facebook_SDK() {
     ?>
-	    <!-- Load Facebook SDK for JavaScript -->
-	      <div id="fb-root"></div>
-	      <script>
-	        window.fbAsyncInit = function() {
-	          FB.init({
-	            xfbml            : true,
-	            version          : 'v4.0'
-	          });
-	        };
-
-	        (function(d, s, id) {
-	        var js, fjs = d.getElementsByTagName(s)[0];
-	        if (d.getElementById(id)) return;
-	        js = d.createElement(s); js.id = id;
-	        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-	        fjs.parentNode.insertBefore(js, fjs);
-	      }(document, 'script', 'facebook-jssdk'));</script>
-
 	      
  <?php
 }
 add_action('wp_footer', 'Facebook_SDK');
-if( is_page( 535 ) ) {
-    remove_action('wp_footer', 'Facebook_SDK');
 }
 
 
@@ -116,16 +96,6 @@ function PixelProducts() {
 add_action('woocommerce_single_product_summary', 'PixelProducts');
 
 
-//remover el campo de "Nombre de la Empresa" del formulario de checkout
-function sj_checkout_fields($fields){
-     unset($fields['order']);
-     return $fields;
-}
-add_filter('woocommerce_checkout_fields','sj_checkout_fields');
-add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
-
-
-
 //Adding the Open Graph in the Language Attributes
 function add_opengraph_doctype( $output ) {
         return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
@@ -138,9 +108,7 @@ function add_opengraph() {
     global $post;
     if ( !is_singular()) //if it is not a post or a page
         return;
-        echo '<meta property="fb:admins" content="310571119096195"/>';
         echo '<meta property="og:title" content="' . get_the_title() . '"/>';
-		echo '<meta property="og:site_name" content="SJ Social Media">';
 		echo '<meta property="og:url" content="' . get_permalink() . '"/>';
 		echo '<meta property="og:description" content="' . get_the_excerpt() . '"/>';
 		echo '<meta property="og:type" content="website">';
