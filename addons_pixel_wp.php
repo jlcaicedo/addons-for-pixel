@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Addons for Pixel on wordpress Plugin
+ * Plugin Name: Addons for Pixel Plugin
  * Description: Adicionar variables para Facebook Pixel en wordpress
  * Plugin URI: https://sjsocialmedia.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Author: SJ Social Media
