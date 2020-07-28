@@ -1,4 +1,4 @@
-=== Addons pixel wp ===
+=== Addons for Pixel Plugin ===
 Contributors: jlcaicedo
 Donate link: https://sjsocialmedia.com/
 Tags: redes sociales, facebook pixel
