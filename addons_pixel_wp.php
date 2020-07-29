@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Addons for Pixel Plugin
+ * Plugin Name: Addons for Pixel
  * Description: Adicionar variables para Facebook Pixel en wordpress
  * Plugin URI: https://sjsocialmedia.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Author: SJ Social Media
@@ -25,8 +25,6 @@
 // PixelViewContent 
 function PixelViewContent() {
     ?>
-		
-		<!-- Add Pixel Events to the button's click handler -->
 		<script> 
 		document.addEventListener("DOMContentLoaded", function(event) { 
 				fbq('track', 'ViewContent', {
@@ -36,19 +34,13 @@ function PixelViewContent() {
 				}); 
 			}); 
 		</script>
-		<!-- End Facebook Pixel Code -->
-		
-
     <?php
 }
 add_action('page_template', 'PixelViewContent');
 
-
 // PixelViewPost 
 function PixelViewPost() {
-    ?>
-		
-		<!-- Add Pixel Events to the button's click handler -->
+    ?>		
 		<script> 
 		document.addEventListener("DOMContentLoaded", function(event) { 
 				fbq('track', 'ViewContent', {
@@ -58,14 +50,10 @@ function PixelViewPost() {
 				  content_type: '<?php $post_type = get_post_type( $post->ID ); echo $post_type; ?>',				   
 				}); 
 			}); 
-		</script>
-		<!-- End Facebook Pixel Code -->
-		
-
+		</script>		
     <?php
 }
 add_action('single_template', 'PixelViewPost');
-
 
 // PixelProducts 
 function PixelProducts() {
@@ -82,22 +70,18 @@ function PixelProducts() {
 				}); 
 			}); 
 		</script>
-		
-
     <?php
 }
 add_action('woocommerce_single_product_summary', 'PixelProducts');
 
-
 //Adding the Open Graph in the Language Attributes
-function add_opengraph_doctype( $output ) {
+function AddOpengraphDoctype( $output ) {
         return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
     }
-add_filter('language_attributes', 'add_opengraph_doctype');
- 
+add_filter('language_attributes', 'AddOpengraphDoctype');
 
 //Lets add Open Graph Meta Info 
-function add_opengraph() {
+function AddFacebookOpengraph() {
     global $post;
     if ( !is_singular()) //if it is not a post or a page
         return;
@@ -108,4 +92,4 @@ function add_opengraph() {
 		echo '<meta property="og:image" content="' . get_the_post_thumbnail_url($post->ID, 'full') . '"/>';
 		echo "";
 }
-add_action( 'wp_head', 'add_opengraph', 5 );
+add_action( 'wp_head', 'AddFacebookOpengraph' );
