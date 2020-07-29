@@ -9,9 +9,7 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds the shortcode [3dpix] which embeds a 3D image from Phereo.com into your post.
-
-It also adds an insert 3D Pix button to the tinymce editor.
+Adds personalized commands to Facebook pixel about your pages.
 
 == Description ==
 
@@ -38,11 +36,7 @@ Is a Agency to Digital Marketing and specialist to WordPress
 
 == Screenshots ==
 
-1. Settings page - shows the default width, height, and display mode for [3dpix] shortcodes
-which do not explicitly set them to different values.
-2. 3D Pix page/post editor button and the dialog to select the 3d image, width, height, and display mode.
-3. Typical [3dpix] shortcode inside a page
-4. This is how an anaglyph 3D Pix is displayed on a WordPress page/post.
+
 
 == Changelog ==
 
