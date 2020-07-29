@@ -1,26 +1,23 @@
 <?php
 /**
  * Plugin Name: Addons for Pixel
- * Description: Adicionar variables para Facebook Pixel en wordpress
+ * Description: Add variables for Facebook Pixel in wordpress
  * Plugin URI: https://sjsocialmedia.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Author: SJ Social Media
  * Version: 1.1
  * Author URI: https://sjsocialmedia.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
  *
- * SJ Social Media Plugin is free software: you can redistribute it and/or modify
+ * Addons for Pixel is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * any later version.
  *
- * SJ Social Media Plugin is distributed in the hope that it will be useful,
+ * Addons for Pixel is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  * 
 */
-
-//Load Facebook SDK for JavaScript
-
 
 // PixelViewContent 
 function PixelViewContent() {
