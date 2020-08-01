@@ -1,6 +1,6 @@
 === Addons for Pixel ===
 Contributors: jlcaicedo
-Donate link: paypal.me/JoseLuisCaicedo
+Donate link: https://www.paypal.com/paypalme/JoseLuisCaicedo
 Tags: redes sociales, facebook pixel
 Requires at least: 5.1
 Tested up to: 5.5
@@ -36,7 +36,7 @@ Get rich insights about how people use your website from your Facebook pixel das
 
 == Support or Contact ==
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](mailto:soporte@sjsocialmedia.com) and we’ll help you sort it out.
+Having trouble with Pages? Check out our [documentation](https://github.com/jlcaicedo/addons-for-pixel) or [contact support](mailto:soporte@sjsocialmedia.com) and we’ll help you sort it out.
 
 == Installation ==
 
