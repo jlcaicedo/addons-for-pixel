@@ -1,6 +1,6 @@
 === Addons for Pixel ===
 Contributors: jlcaicedo
-Donate link: https://sjsocialmedia.com/
+Donate link: paypal.me/JoseLuisCaicedo
 Tags: redes sociales, facebook pixel
 Requires at least: 5.1
 Tested up to: 5.5
