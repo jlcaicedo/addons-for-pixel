@@ -56,7 +56,7 @@ Is a Agency to Digital Marketing and specialist to WordPress
 
 == Changelog ==
 
-= 1.2 =
+= 1.2.1 =
 * tested plugin with WordPress 6.0
 
 = 1.1 =
