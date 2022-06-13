@@ -11,6 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     name: 'WordPress Deploy'
     steps:
+      - name: cleanup
+        uses: rokroskar/workflow-run-cleanup-action
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEBUG: FALSE
+
       - name: Checkout
         uses: actions/checkout@v2
 
