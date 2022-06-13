@@ -17,7 +17,6 @@ jobs:
       - name: Build # Remove or modify this step as needed
         working-directory: ./addons-for-pixel
         run: |
-          pwd
           ls -la
           npm install
           npm run build
