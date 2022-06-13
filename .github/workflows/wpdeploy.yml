@@ -7,19 +7,12 @@ on:
 
 
 jobs:
-  test:
+  wppost:
     runs-on: ubuntu-latest
-    name: 'test job'
+    name: 'WordPress Deploy'
     steps:
       - name: Checkout
         uses: actions/checkout@master
-
-#      - name: Build # Remove or modify this step as needed
-#        working-directory: ./addons-for-pixel
-#        run: |
-#          ls -la
-#          npm install
-#          npm run build
 
       - name: WordPress Plugin Deploy
         uses: 10up/action-wordpress-plugin-deploy@master
