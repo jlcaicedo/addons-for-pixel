@@ -22,7 +22,6 @@ jobs:
 #          npm run build
 
       - name: WordPress Plugin Deploy
-        working-directory: ./addons-for-pixel
         uses: 10up/action-wordpress-plugin-deploy@master
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
