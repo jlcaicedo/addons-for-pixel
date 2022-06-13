@@ -12,7 +12,7 @@ jobs:
     name: 'WordPress Deploy'
     steps:
       - name: cleanup
-        uses: rokroskar/workflow-run-cleanup-action
+        uses: rokroskar/workflow-run-cleanup-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           DEBUG: FALSE
