@@ -14,8 +14,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - uses: 10up/action-wordpress-plugin-deploy@master
       - name: WordPress Plugin Deploy
+        uses: 10up/action-wordpress-plugin-deploy@master
         working-directory: ./app
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
