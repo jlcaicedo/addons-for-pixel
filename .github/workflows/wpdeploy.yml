@@ -17,7 +17,6 @@ jobs:
       - uses: actions/checkout@master
       - name: Build # Remove or modify this step as needed
         run: |
-          cd /home/runner/work/addons-for-pixel
           npm install
           npm run build
       - name: WordPress Plugin Deploy
