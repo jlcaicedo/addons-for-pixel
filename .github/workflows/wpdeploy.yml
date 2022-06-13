@@ -14,14 +14,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@master
 
-      - name: Build # Remove or modify this step as needed
-        working-directory: ./addons-for-pixel
-        run: |
-          ls -la
-          npm install
-          npm run build
+#      - name: Build # Remove or modify this step as needed
+#        working-directory: ./addons-for-pixel
+#        run: |
+#          ls -la
+#          npm install
+#          npm run build
 
       - name: WordPress Plugin Deploy
+        working-directory: ./addons-for-pixel
         uses: 10up/action-wordpress-plugin-deploy@master
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
