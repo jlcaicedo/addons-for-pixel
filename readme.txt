@@ -56,7 +56,7 @@ Is a Agency to Digital Marketing and specialist to WordPress
 
 == Changelog ==
 
-= 1.7.1 =
+= 1.7.2 =
 * tested plugin with WordPress 7.2
 
 Verificación del Plugin de Facebook Pixel: La función AFP_check_facebook_pixel_active utiliza is_plugin_active para verificar si el plugin de Facebook Pixel está activo. Necesitarás reemplazar 'facebook-pixel-plugin/facebook-pixel-plugin.php' con la ruta correcta del archivo principal del plugin de Facebook Pixel.
