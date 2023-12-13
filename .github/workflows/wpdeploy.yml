@@ -2,8 +2,8 @@ name: Deploy to WordPress.org
 
 on:
   push:
-    branches:
-      - *
+    tags:
+    - "*"
 
 jobs:
   wp-post:
