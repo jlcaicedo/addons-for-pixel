@@ -4,7 +4,7 @@
  * Description: Add variables for Facebook Pixel in WordPress
  * Plugin URI: https://sjsocialmedia.com/?utm_source=wp-plugins&utm_campaign=plugin-uri&utm_medium=wp-dash
  * Author: SJ Social Media
- * Version: 1.7.1
+ * Version: 1.7.2
  * Author URI: https://sjsocialmedia.com/?utm_source=wp-plugins&utm_campaign=author-uri&utm_medium=wp-dash
  *
  * License: GPL v2 or later
