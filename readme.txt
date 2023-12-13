@@ -3,9 +3,9 @@ Contributors: jlcaicedo
 Donate link: https://www.paypal.com/paypalme/JoseLuisCaicedo
 Tags: redes sociales, facebook pixel
 Requires at least: 5.1
-Tested up to: 6.0
+Tested up to: 5.5
 Requires PHP: 7.2
-Stable tag: 1.2.1
+Stable tag: 1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -56,8 +56,29 @@ Is a Agency to Digital Marketing and specialist to WordPress
 
 == Changelog ==
 
-= 1.2.1 =
-* tested plugin with WordPress 6.0
+= 1.7.1 =
+* tested plugin with WordPress 7.2
+
+Verificación del Plugin de Facebook Pixel: La función AFP_check_facebook_pixel_active utiliza is_plugin_active para verificar si el plugin de Facebook Pixel está activo. Necesitarás reemplazar 'facebook-pixel-plugin/facebook-pixel-plugin.php' con la ruta correcta del archivo principal del plugin de Facebook Pixel.
+
+Mostrar un Aviso en el Panel de Administración: Si el plugin de Facebook Pixel no está activo, se añade un aviso en el panel de administración mediante admin_notices.
+
+Internacionalización: La función _e se utiliza para permitir la traducción del texto del aviso. Asegúrate de que el text domain 'addons-for-pixel' coincida con el que utilizas en tu plugin.
+
+= 1.7.0 =
+* tested plugin with WordPress 7.2
+
+Facebook Pixel Script Insertion Generalization: A generic function AFP_insert_fb_pixel_script is created to insert the Facebook Pixel script. This reduces code duplication.
+
+Page Type Check: The AFP_FPViewContent, AFP_FPViewPost and AFP_FPProducts functions now check the page type (page, post, WooCommerce product) before running the script.
+
+Using wp_footer for Scripts: Change the hook to wp_footer to ensure that the script is loaded at the end of the body of the page.
+
+WooCommerce Compatibility: It checks if WooCommerce is active before running the script on products.
+
+Data Escaping: WordPress escaping functions are used to ensure data security.
+
+Open Graph Meta Tags: Open Graph meta tags are added to the head to improve integration with Facebook.
 
 = 1.1 =
 * tested plugin with WordPress 5.5
