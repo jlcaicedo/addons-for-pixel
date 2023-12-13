@@ -6,27 +6,30 @@ on:
       - stable
 
 jobs:
-  wppost:
+  wp-post:
     runs-on: ubuntu-latest
     name: 'WordPress Deploy'
     steps:
       - name: Checkout
+        id: checkout
         uses: actions/checkout@v2
-
+      
       - name: WordPress Plugin Deploy
+        id: deploy
         uses: 10up/action-wordpress-plugin-deploy@stable
         with:
           generate-zip: true
         env:
           SVN_PASSWORD: ${{ secrets.SVN_PASSWORD }}
           SVN_USERNAME: ${{ secrets.SVN_USERNAME }}
-
+      
       - name: Upload release asset
+        id: upload
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ github.event.release.upload_url }}
-          asset_path: ${{github.workspace}}/${{ github.event.repository.name }}.zip
+          asset_path: ${{ steps.deploy.outputs.zip-path }}
           asset_name: ${{ github.event.repository.name }}.zip
           asset_content_type: application/zip
